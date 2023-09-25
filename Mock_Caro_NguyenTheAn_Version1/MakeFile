@@ -1,0 +1,31 @@
+CC = gcc
+CFLAGS = -Wall
+all: Main.o Player.o ChessBoard.o GameController.o GameMonitor.o Player.o Caro.o ReplayGame.o PlayerInformation.o ReplayMonitor.o RankBoard.o
+    $(CC) $(CFLAGS) -o my_program Main.o functions.o
+
+Main.o: Main.cpp 
+    $(CC) $(CFLAGS) -g Main.cpp
+Player.o: Player.cpp 
+    $(CC) $(CFLAGS) -g Player.cpp
+ChessBoard.o: ChessBoard.cpp 
+    $(CC) $(CFLAGS) -g ChessBoard.cpp
+GameController.o: GameController.cpp 
+    $(CC) $(CFLAGS) -g GameController.cpp
+GameMonitor.o: GameMonitor.cpp 
+    $(CC) $(CFLAGS) -g GameMonitor.cpp
+Player.o: Player.cpp 
+    $(CC) $(CFLAGS) -g Player.cpp
+Caro.o: Caro.cpp 
+    $(CC) $(CFLAGS) -g Caro.cpp
+ReplayGame.o: ReplayGame.cpp 
+    $(CC) $(CFLAGS) -g ReplayGame.cpp
+PlayerInformation.o: PlayerInformation.cpp 
+    $(CC) $(CFLAGS) -g PlayerInformation.cpp
+ReplayMonitor.o: ReplayMonitor.cpp 
+    $(CC) $(CFLAGS) -g ReplayMonitor.cpp
+RankBoard.o: RankBoard.cpp 
+    $(CC) $(CFLAGS) -g RankBoard.cpp
+
+        
+clean:
+    rm -f *.o my_program
